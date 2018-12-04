@@ -10,6 +10,11 @@ import java.util.List;
  * @author kimtian
  **/
 public interface UserService {
+    /**
+     * 获取全部用户
+     *
+     * @return List<User>用户列表
+     **/
     public List<User> getUser();
 }
 

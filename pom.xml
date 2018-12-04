@@ -90,10 +90,10 @@
         <!--</dependency>-->
         <!--Spring-session-->
         <!--分布式系统中，sessiong共享有很多的解决方案，其中托管到缓存中应该是最常用的方案之一，-->
-        <dependency>
-            <groupId>org.springframework.session</groupId>
-            <artifactId>spring-session-data-redis</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.session</groupId>-->
+            <!--<artifactId>spring-session-data-redis</artifactId>-->
+        <!--</dependency>-->
         <!--Mybaties-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

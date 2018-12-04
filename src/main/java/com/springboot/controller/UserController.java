@@ -24,12 +24,12 @@ public class UserController {
         return user;
     }
 
-//    @Resource
-//    private UserService userService;
-//
-//    @GetMapping("/users")
-//    public List<User> users () {
-//        return userService.getUser();
-//    }
+    @Resource
+    private UserService userService;
+
+    @GetMapping("/users")
+    public List<User> users () {
+        return userService.getUser();
+    }
 }
 
