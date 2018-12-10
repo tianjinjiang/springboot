@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-05T07:03:49.055+0000",
+  "path": "/addUser",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "\n### Error updating database.  Cause: java.sql.SQLException: Field 'ID' doesn't have a default value\n### The error may involve com.springboot.mapper.UserMapper.insert-Inline\n### The error occurred while setting parameters\n### SQL: INSERT INTO USER(name,age) VALUES(?,?)\n### Cause: java.sql.SQLException: Field 'ID' doesn't have a default value\n; ]; Field 'ID' doesn't have a default value; nested exception is java.sql.SQLException: Field 'ID' doesn't have a default value"
+}

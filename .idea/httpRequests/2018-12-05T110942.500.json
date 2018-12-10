@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-05T03:09:42.886+0000",
+  "path": "/addUser",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'user' in 'class com.springboot.domain.User'"
+}

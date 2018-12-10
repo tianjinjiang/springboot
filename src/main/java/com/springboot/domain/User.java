@@ -12,7 +12,7 @@ public class User implements Serializable {
     /**
      * 用户编号
      **/
-    private int id;
+    private Long id;
     /**
      * 用户姓名
      **/
@@ -38,11 +38,11 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

@@ -25,20 +25,36 @@ public interface UserMapper {
      **/
     List<User> getAll();
 
-//    @Select("SELECT * FROM USER WHERE id = #{id}")
-//    @Results({
-//            @Result(property = "id",  column = "id"),
-//            @Result(property = "name", column = "name")
-//    })
-//    User getOne(Long id);
-//
-//    @Insert("INSERT INTO USER(userName) VALUES(${userName})")
-//    void insert(User user);
-//
-//    @Update("UPDATE USER SET userName=${userName} WHERE id =#{id}")
-//    void update(User user);
-//
-//    @Delete("DELETE FROM USER WHERE id =#{id}")
-//    void delete(Long id);
+    @Select("SELECT * FROM USER WHERE id = #{id}")
+    /**
+     * 根据id获取用户
+     * @param id 用户id
+     * @return User 用户
+     **/
+    User getOne(Long id);
+
+    /**
+     * 增加用户
+     *
+     * @param user 用户
+     **/
+    @Insert("INSERT INTO USER(name,age) VALUES(${name},${age})")
+    void insert(User user);
+
+    /**
+     * 更新用户
+     *
+     * @param user 用户
+     **/
+    @Update("UPDATE USER SET name=#{name},age=#{age} WHERE id =#{id}")
+    void update(User user);
+
+    /**
+     * 删除用户
+     *
+     * @param id 用户Id
+     **/
+    @Delete("DELETE FROM USER WHERE id =#{id}")
+    void delete(Long id);
 
 }

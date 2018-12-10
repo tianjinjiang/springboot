@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-05T07:14:06.553+0000",
+  "path": "/addUser",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "\n### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '田江江' in 'field list'\n### The error may involve com.springboot.mapper.UserMapper.insert-Inline\n### The error occurred while setting parameters\n### SQL: INSERT INTO USER(name,age) VALUES(田江江,17)\n### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '田江江' in 'field list'\n; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column '田江江' in 'field list'"
+}

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-05T07:03:33.934+0000",
+  "path": "/addUser",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "\n### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',USER(age) VALUES('田小江',17)' at line 1\n### The error may involve com.springboot.mapper.UserMapper.insert-Inline\n### The error occurred while setting parameters\n### SQL: INSERT INTO USER(name),USER(age) VALUES(?,?)\n### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',USER(age) VALUES('田小江',17)' at line 1\n; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',USER(age) VALUES('田小江',17)' at line 1"
+}

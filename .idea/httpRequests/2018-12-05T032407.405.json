@@ -1,0 +1,7 @@
+{
+  "timestamp": "2018-12-05T07:24:06.930+0000",
+  "path": "/updateUser",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "message": "Request method 'GET' not supported"
+}

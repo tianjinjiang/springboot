@@ -15,6 +15,37 @@ public interface UserService {
      *
      * @return List<User>用户列表
      **/
-    public List<User> getUser();
+    List<User> getUser();
+
+    /**
+     * 获取指定用户
+     *
+     * @param id 用户id
+     * @return User 用户
+     **/
+    User getOne(Long id);
+
+    /**
+     * 增加指定用户
+     *
+     * @param user 用户
+     * @return int
+     **/
+    int addUser(User user);
+
+    /**
+     * 更新指定用户
+     *
+     * @param user 用户
+     * @return int
+     **/
+    int updateUser(User user);
+
+    /**
+     * 删除指定用户
+     *
+     * @param id 用户id
+     **/
+    void deleteUser(Long id);
 }
 

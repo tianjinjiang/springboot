@@ -1,0 +1,196 @@
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T033107.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T033050.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T033043.500.json
+
+###
+
+POST http://localhost:8080/updateUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T032414.500.json
+
+###
+
+GET http://localhost:8080/updateUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T032407.405.json
+
+###
+
+GET http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T032356.200.json
+
+###
+
+POST http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T032348.405.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T031406.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T031307.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T031227.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T030720.200.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T030349.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T030334.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T030257.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T030040.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110942.500.json
+
+###
+
+POST http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110812.500.json
+
+###
+
+GET http://localhost:8080/addUser
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110802.405.json
+
+###
+
+GET http://localhost:8080/getUserById
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110244.200.json
+
+###
+
+GET http://localhost:8080/getUserById
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110206.200.json
+
+###
+
+GET http://localhost:8080/getUserById
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110203.200.json
+
+###
+
+GET http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-05T110151.200.json
+
+###
+
+GET http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-04T094714.200.json
+
+###
+
+GET http://localhost:8080/getUsers
+Accept: */*
+Cache-Control: no-cache
+
+###
+
