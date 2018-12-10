@@ -4,7 +4,9 @@ import com.springboot.domain.User;
 import com.springboot.service.impl.UserServiceImpl;
 import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.stereotype.Component;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -14,7 +16,8 @@ import java.util.List;
  *
  * @author kimtian
  **/
-@Component
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class UserTest {
     @Resource
     UserServiceImpl userService;

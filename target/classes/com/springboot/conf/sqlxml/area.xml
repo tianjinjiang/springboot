@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2016 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Area">
+
+    <resultMap type="com.springboot.domain.Area" id="AreaResult">
+        <id column="AREA_ID" jdbcType="INTEGER" property="areaId"/>
+        <result column="AREA_NAME" jdbcType="VARCHAR" property="areaName"/>
+        <result column="PRIORITY" jdbcType="INTEGER" property="priority"/>
+        <result column="CREATE_TIME" jdbcType="DATE" property="createTime"/>
+        <result column="LAST_EDIT_TIME" jdbcType="DATE" property="lastEditTime"/>
+    </resultMap>
+    <select id="searchAreaList" resultMap="AreaResult">
+        select AREA_ID,AREA_NAME,PRIORITY,CREATE_TIME,LAST_EDIT_TIME from TB_AREA where 1=1
+    </select>
+    <delete id="deleteOne" parameterType="Integer">
+        delete from TB_AREA where AREA_ID=#{_parameter}
+    </delete>
+    <delete id="deleteBatch" parameterType="java.util.List">
+        delete from TB_AREA where AREA_ID in (
+        <foreach collection="list" item="item" separator=",">
+            #{item}
+        </foreach>
+        )
+    </delete>
+    <insert id="insertArea" parameterType="java.util.List">
+        insert into TB_AREA (AREA_NAME,PRIORITY,CREATE_TIME,LAST_EDIT_TIME) values
+        <foreach collection="list" item="area" index="index" separator=",">
+            (
+            #{area.areaName},
+            #{area.priority},
+            #{area.createTime},
+            #{area.lastEditTime}
+            )
+        </foreach>
+    </insert>
+    <update id="updateArea" parameterType="com.springboot.domain.Area">
+        update TB_AREA
+        <set>
+            <if test="areaName!=null and !&quot;&quot;.equals(areaName.trim())">
+                AREA_NAME = #{areaName},
+            </if>
+            <if test="priority!=null and priority!=0">
+                PRIORITY = #{priority},
+            </if>
+            <if test="createTime!=null and !&quot;&quot;.equals(createTime.trim())">
+                CREATE_TIME = #{createTime},
+            </if>
+            <if test="lastEditTime!=null and !&quot;&quot;.equals(lastEditTime.trim())">
+                LAST_EDIT_TIME = #{lastEditTime},
+            </if>
+        </set>
+        <where>
+            AREA_ID = #{areaId}
+        </where>
+    </update>
+</mapper>

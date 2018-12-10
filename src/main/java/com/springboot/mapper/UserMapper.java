@@ -13,7 +13,7 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    @Select("SELECT * FROM USER")
+    @Select("SELECT * FROM USERS")
     @Results({
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
@@ -25,7 +25,7 @@ public interface UserMapper {
      **/
     List<User> getAll();
 
-    @Select("SELECT * FROM USER WHERE id = #{id}")
+    @Select("SELECT * FROM USERS WHERE id = #{id}")
     /**
      * 根据id获取用户
      * @param id 用户id
@@ -38,7 +38,7 @@ public interface UserMapper {
      *
      * @param user 用户
      **/
-    @Insert("INSERT INTO USER(name,age) VALUES(${name},${age})")
+    @Insert("INSERT INTO USERS(name,age) VALUES(${name},${age})")
     void insert(User user);
 
     /**
@@ -46,7 +46,7 @@ public interface UserMapper {
      *
      * @param user 用户
      **/
-    @Update("UPDATE USER SET name=#{name},age=#{age} WHERE id =#{id}")
+    @Update("UPDATE USERS SET name=#{name},age=#{age} WHERE id =#{id}")
     void update(User user);
 
     /**
@@ -54,7 +54,7 @@ public interface UserMapper {
      *
      * @param id 用户Id
      **/
-    @Delete("DELETE FROM USER WHERE id =#{id}")
+    @Delete("DELETE FROM USERS WHERE id =#{id}")
     void delete(Long id);
 
 }

@@ -1,8 +1,11 @@
 package com.springboot.controller;
 
+import com.FirstDemoApplication;
 import com.springboot.domain.User;
 import com.springboot.service.UserService;
-import com.springboot.service.impl.UserServiceImpl;
+import org.apache.ibatis.type.JdbcType;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +15,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Helloworld Controller
+ * 用户 控制器
  *
  * @author kimtian
  **/
@@ -65,8 +68,9 @@ public class UserController {
 
 
     public static void main(String[] args) {
-        UserServiceImpl userService = new UserServiceImpl();
-        List<User> userList = userService.getUser();
+        ApplicationContext a = SpringApplication.run(FirstDemoApplication.class, args);
+        UserService b = a.getBean(UserService.class);
+        List<User> userList = b.getUser();
         for (User user : userList) {
             System.out.println(user.getId() + "," + user.getName() + "," + user.getAge());
         }
