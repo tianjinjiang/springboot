@@ -2,12 +2,13 @@ package com.springboot.controller;
 
 import com.springboot.domain.Area;
 import com.springboot.service.AreaService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 地域控制器
@@ -24,25 +25,19 @@ public class AreaController {
         return areaService.queryAreaList();
     }
 
-    @GetMapping("/deleteById")
-    public void deleteById() {
-        areaService.deleteById(5);
+    @RequestMapping(value = "/deleteById", method = RequestMethod.GET)
+    public void deleteById(int areaId) {
+        areaService.deleteById(areaId);
     }
 
+    @RequestMapping(value = "/addArea", method = RequestMethod.POST)
     @GetMapping("/addArea")
-    public void addArea() {
+    public Map<String, Object> addArea(@RequestBody Area area) {
+        Map<String, Object> modelMap = new HashMap<String, Object>();
         List<Area> areas = new ArrayList<>();
-        Area area1 = new Area();
-        area1.setAreaId(5);
-        area1.setAreaName("test1");
-        area1.setPriority(5);
-        areas.add(area1);
-        Area area = new Area();
-        area.setAreaId(5);
-        area.setAreaName("tesrrt1");
-        area.setPriority(5);
         areas.add(area);
-        areaService.addArea(areas);
+        modelMap.put("success", areaService.addArea(areas));
+        return modelMap;
     }
 
     @GetMapping("/deleteBatch")

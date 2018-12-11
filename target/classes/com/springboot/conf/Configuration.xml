@@ -21,12 +21,10 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-    <!--
     <settings>
       <setting name="useGeneratedKeys" value="false"/>
       <setting name="useColumnLabel" value="true"/>
     </settings>
-  -->
     <!--
     <typeAliases>
       <typeAlias alias="UserAlias" type="org.apache.ibatis.submitted.complex_property.User"/>

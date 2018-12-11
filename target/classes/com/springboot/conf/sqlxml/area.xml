@@ -42,7 +42,7 @@
         </foreach>
         )
     </delete>
-    <insert id="insertArea" parameterType="java.util.List">
+    <insert id="insertArea" useGeneratedKeys="true" parameterType="java.util.List">
         insert into TB_AREA (AREA_NAME,PRIORITY,CREATE_TIME,LAST_EDIT_TIME) values
         <foreach collection="list" item="area" index="index" separator=",">
             (

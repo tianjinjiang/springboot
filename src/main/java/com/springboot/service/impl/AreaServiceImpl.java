@@ -5,7 +5,6 @@ import com.springboot.domain.Area;
 import com.springboot.service.AreaService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,14 +47,27 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public void addArea(List<Area> areaList) {
+    public boolean addArea(List<Area> areaList) {
         AreaDao areaDao = new AreaDao();
-        areaDao.insertMessage(areaList);
+        if (areaList != null && areaList.size() > 0) {
+            try {
+                int num = areaDao.insertMessage(areaList);
+                if (num > 0) {
+                    return true;
+                } else {
+                    throw new RuntimeException("插入区域信息失败");
+                }
+            } catch (Exception e) {
+                throw new RuntimeException("插入区域信息失败" + e.getMessage());
+            }
+        } else {
+            throw new RuntimeException("区域信息不能为空！");
+        }
     }
 
     @Override
     public void updateArea(Area area) {
-        System.out.println("!!!!!"+area.getPriority());
+        System.out.println("!!!!!" + area.getPriority());
         AreaDao areaDao = new AreaDao();
         areaDao.updateArea(area);
     }

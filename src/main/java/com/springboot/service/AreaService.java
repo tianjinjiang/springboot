@@ -36,7 +36,7 @@ public interface AreaService {
      *
      * @param areaList 消息列表
      **/
-    void addArea(List<Area> areaList);
+    boolean addArea(List<Area> areaList);
 
     /**
      * 更新消息

@@ -85,7 +85,7 @@ public class AreaDao {
      *
      * @param areaList 地域列表
      **/
-    public void insertMessage(List<Area> areaList) {
+    public int insertMessage(List<Area> areaList) {
         DBAcess dbAcess = new DBAcess();
         SqlSession sqlSession = null;
         try {
@@ -99,6 +99,7 @@ public class AreaDao {
                 sqlSession.close();
             }
         }
+        return 1;
     }
 
     /**
